@@ -1,16 +1,19 @@
-<p style="color: green"><%= notice %></p>
-
-<% content_for :title, "Dishes" %>
-
-<h1>Dishes</h1>
-
-<div id="dishes">
-  <% @dishes.each do |dish| %>
-    <%= render dish %>
-    <p>
-      <%= link_to "Show this dish", dish %>
-    </p>
-  <% end %>
+<div class="page">
+  <h1 class="page-title">Our Dishes</h1>
+  <div class="dish-grid">
+    <% @dishes.each do |dish| %>
+      <div class="dish-card">
+        <div class="dish-image">
+          <%= image_tag(dish.image_names, alt: dish.name) %>
+        </div>
+        <div class="dish-body">
+          <% if dish.bestseller %>
+            <p class="dish-badge">🔥 Bestseller</p>
+          <% end %>
+          <h2 class="dish-name"><%= dish.name %></h2>
+          <p class="dish-price">₱<%= number_with_precision(dish.price, precision: 2) %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>
-
-<%= link_to "New dish", new_dish_path %>
