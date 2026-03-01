@@ -8,7 +8,7 @@
         </div>
         <div class="dish-body">
           <% if dish.bestseller %>
-            <p class="dish-badge">🔥 Bestseller</p>
+            <p class="dish-badge">Bestseller</p>
           <% end %>
           <h2 class="dish-name"><%= dish.name %></h2>
           <p class="dish-price">₱<%= number_with_precision(dish.price, precision: 2) %></p>
