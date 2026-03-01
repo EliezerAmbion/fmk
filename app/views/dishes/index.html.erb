@@ -12,6 +12,15 @@
           </p>
           <h2 class="dish-name"><%= dish.name %></h2>
           <p class="dish-price">₱<%= number_with_precision(dish.price, precision: 2) %></p>
+          <%# Quantity and Add to cart %>
+          <div class="add-to-cart">
+            <div class="quantity-control">
+              <button class="qty-btn">−</button>
+              <span class="qty-value">1</span>
+              <button class="qty-btn">+</button>
+            </div>
+            <button class="add-btn">Add to Cart</button>
+          </div>
         </div>
       </div>
     <% end %>
