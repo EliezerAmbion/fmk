@@ -1,6 +1,12 @@
 /* Page layout */
 body {
   background: #f3f4f6;
+  font-family:
+    'Inter',
+    system-ui,
+    -apple-system,
+    sans-serif;
+  color: #111111;
 }
 .page {
   max-width: 1200px;
@@ -59,7 +65,7 @@ body {
 /* Image */
 .dish-image {
   width: 100%;
-  height: 192px;
+  height: 250px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -73,22 +79,30 @@ body {
 }
 
 /* Body */
-/* .dish-body {
-  padding: 16px;
-} */
+.dish-body {
+  padding: 0px 0px;
+}
 
 .dish-name {
-  font-size: 1.5rem;
+  margin: 0 0 2px 0;
+  font-size: 0.95rem; /* smaller than before */
   font-weight: 600;
-  margin: 0px;
+  line-height: 1.3;
+  color: #111111;
 }
 
 .dish-price {
-  font-weight: bold;
-  margin-bottom: 8px;
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 500; /* NOT bold */
+  color: #111111;
 }
 
 /* Bestseller badge */
 .dish-badge {
-  margin: 0;
+  margin: 0 0 4px 0;
+  font-size: 0.75rem; /* small */
+  font-weight: 500;
+  color: #757575; /* Nike gray */
+  letter-spacing: 0.02em;
 }
