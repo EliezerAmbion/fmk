@@ -79,9 +79,9 @@ body {
 }
 
 /* Body */
-.dish-body {
-  padding: 0px 0px;
-}
+/* .dish-body {
+  padding: 0;
+} */
 
 .dish-name {
   margin: 0 0 2px 0;
@@ -92,10 +92,17 @@ body {
 }
 
 .dish-price {
-  margin: 0;
-  font-size: 0.9rem;
-  font-weight: 500; /* NOT bold */
-  color: #111111;
+  margin: 0 0 4px 0;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #757575;
+  letter-spacing: 0.02em;
+  min-height: 1em; /* reserve space */
+}
+
+/* Hide text but keep space */
+.dish-badge.hidden {
+  visibility: hidden;
 }
 
 /* Bestseller badge */

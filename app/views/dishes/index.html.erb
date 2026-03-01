@@ -7,9 +7,9 @@
           <%= image_tag(dish.image_names, alt: dish.name) %>
         </div>
         <div class="dish-body">
-          <% if dish.bestseller %>
-            <p class="dish-badge">Bestseller</p>
-          <% end %>
+          <p class="dish-badge <%= 'hidden' unless dish.bestseller %>">
+            Bestseller
+          </p>
           <h2 class="dish-name"><%= dish.name %></h2>
           <p class="dish-price">₱<%= number_with_precision(dish.price, precision: 2) %></p>
         </div>
